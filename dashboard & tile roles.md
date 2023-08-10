@@ -1,4 +1,4 @@
-# `dashboard` Fole
+# `dashboard` Role
 
 ## Introduction
 
@@ -38,3 +38,31 @@ The `tile` role is the accessibility child of the `dashboard` role. The elements
 - Accessibility Parent: `dashboard`
 
 # Keyboard Commands
+
+# Keyboard operation
+
+This digression belongs more to the ARIA Authoring Practices Guide, but it is useful to thinking about keyboard operation concerning a new role right away.
+
+Some of the dashboards available on the Web allow navigation between the widgets using the arrow keys or the tab key. Very few allow resizing and repositioning using the keyboard. However, most dashboards do not provide for their own keyboard navigation between the tiles.
+
+All functionalities that are possible with the mouse must also be available with the keyboard:
+
+- Navigation between the individual tiles
+
+- Changing the tile order
+
+- Customizing the tile size.
+
+Here are some suggested keyboard shortcuts:
+
+| key combination | function |
+| F6 / Shift+F6 | Leave the Dashboard |
+| arrow keys | Navigate between the tiles (in visual order). The focus is always set to the first widget in a tile. |
+| Ctrl+right arrow | Go to the next tile in the complete tile order |
+| Ctrl+Left Arrow | Go to the previous tile in the complete tile order |
+| Tab and Shift+Tab | Go to next/previous widget (through all tiles) |
+
+All functionalities of a tile that are possible with the mouse must also be made available via the keyboard. To adjust the size and/or the position of a tile in the dashboard using the keyboard, there are two alternative possibilities:
+
+1. A menu button in the tile opens a menu with corresponding options, or
+2. Shift+F10 / context menu key opens a context menu with appropriate options when the focus is on a widget in a tile.
