@@ -56,6 +56,7 @@ Alle Funktionalitäten, die mit der Maus möglich sind, stehen auch per Tastatur
 Hier ist ein Vorschlag für Tastenkombinationen:
 
 | Tastenkombination | Funktion |
+|------------------|------------------|
 | F6 / Umschalt+F6 | Verlassen des Dashboards |
 | Pfeiltasten | Navigieren zwischen den  Kacheln (in visueller Anordnung). Der Fokus wird jeweils auf den ersten Widget in einer  Kachel gesetzt. |
 | Strg + Pfeil rechts | Zur nächsten Kachel in der kompletten  Kachel-Reihenfolge |

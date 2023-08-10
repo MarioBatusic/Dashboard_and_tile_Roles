@@ -55,7 +55,8 @@ All functionalities that are possible with the mouse must also be available with
 
 Here are some suggested keyboard shortcuts:
 
-| key combination | function |
+| Keyboard Shortcut | Function |
+|------------------|--------------------|
 | F6 / Shift+F6 | Leave the Dashboard |
 | arrow keys | Navigate between the tiles (in visual order). The focus is always set to the first widget in a tile. |
 | Ctrl+right arrow | Go to the next tile in the complete tile order |
