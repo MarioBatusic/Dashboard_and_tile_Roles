@@ -37,9 +37,7 @@ The `tile` role is the accessibility child of the `dashboard` role. The elements
 - Similar concept: table cell (`cell` element)
 - Accessibility Parent: `dashboard`
 
-# Keyboard Commands
-
-# Keyboard operation
+# Keyboard Shortcuts
 
 This digression belongs more to the ARIA Authoring Practices Guide, but it is useful to thinking about keyboard operation concerning a new role right away.
 
