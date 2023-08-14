@@ -4,24 +4,24 @@
 
 The dashboard is a container that is being used more and more.
 
-A dashboard is a graphical representation of information, data, or performance indicators presented in a compact form on a single screen. It provides a concise and easy-to-understand overview of various aspects of a business process, website, application or other system. Dashbboards also often serve as an entry-point to the different areas of a web application.
+A dashboard is a graphical representation of information, data, or performance indicators presented in a compact form on a single screen. It provides a concise and easy-to-understand overview of various aspects of a business process, website, application or other system. Dashboards also often serve as an entry-point to the different areas of a web application.
 
-In terms of layout, dashboards usually take up the entire application window, but often also only use the main area or even just part of it. Widgets within dashboards can often be grouped, adjusted in size and rearanged by the user. Since there is no semantic markup for the dashboard area up to now, it is very difficult, especially for the screen reader users and for the users of magnifier software, to identify a dashboard as such. 
+In terms of layout, dashboards usually take up the entire application window, but often also only use the main area or even just part of it. Widgets within dashboards can often be grouped, adjusted in size and rearranged by the user. Since there is no semantic markup for the dashboard area up to now, it is very difficult, especially for the screen reader users and for the users of magnifier software, to identify a dashboard as such. 
 
 In addition, dashboards are areas that Matt King describes in his proposal [An Accessibility Opportunity Hidden in Modeless Web Dialogs](https://gist.github.com/mcking65/11882ebbe2889964c62ab5a16ab528c3) as "similar to modeless dialogs".
 
 ## Examples
 Here is an example of the home dashboard SAP's S/4HANA:
 ![Home dashboard of SAP's S/4HANA](SAP-home-dashboard.png)
-In this dashboard tiles can be grouped, rearanged and adjusted in size by the user.
+In this dashboard tiles can be grouped, rearranged and adjusted in size by the user.
 
 Another example of a dashboard is SAP's sales overview dashboard:
 ![Sales dashboard of SAP's S/4HANA](SAP-sales-overview.png)
-Here tiles can be freely rearanged and ajdusted by the user, but not grouped.
+Here tiles can be freely rearranged and adjusted by the user, but not grouped.
 
 A final example for a dashboard is Fabasofts cloud home dashboard:
 ![Fabasoft Cloud Home](HomeDashboard.png)
-In this dashboard tiles can be rearanged and ajdusted by the user based on a grid layout, but not grouped.
+In this dashboard tiles can be rearranged and adjusted by the user based on a grid layout, but not grouped.
 
 ## ARIA Semantics
 
@@ -38,7 +38,7 @@ In this dashboard tiles can be rearanged and ajdusted by the user based on a gri
 
 ## Description
 
-The `tile` role is the accessibility child of the `dashboard` role. Elements with this role are similar to the elements with the `cell` role in that they are placed next to each other in a table cell-like manner, both horizontally and vertically. Like table cells they can be of different sizes. Tiles thus behave like `td` elements that have different values for their `colspan` and/or `rowspan` attributes. This comparisson is only intended to help to better understand the concept and does not mean that the tiles in the markup always follow the table paradigm.
+The `tile` role is the accessibility child of the `dashboard` role. Elements with this role are similar to the elements with the `cell` role in that they are placed next to each other in a table cell-like manner, both horizontally and vertically. Like table cells they can be of different sizes. Tiles thus behave like `td` elements that have different values for their `colspan` and/or `rowspan` attributes. This comparison is only intended to help to better understand the concept and does not mean that the tiles in the markup always follow the table paradigm.
 
 ## ARIA Semantics
 - Role name: `tile` or `card`
