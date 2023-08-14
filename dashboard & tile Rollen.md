@@ -2,22 +2,28 @@
 
 ## Einleitung
 
-Das Dashboard ist ein Container, der immer mehr in Verwendung ist.
+Das Dashboard ist ein Container, der immer häufiger verwendet wird.
 
-Ein Dashboard ist eine grafische Darstellung von Informationen, Daten oder Leistungsindikatoren, die in kompakter Form auf einer einzigen Bildschirmseite angezeigt werden. Es bietet einen übersichtlichen und leicht verständlichen Überblick über verschiedene Aspekte eines Geschäftsprozesses, einer Website, einer Anwendung oder eines anderen Systems. Sie dienen ebenfalls oft als Einstieg zu den einzelnen Bereichen einer Webanwendung.
+Ein Dashboard ist eine grafische Darstellung von Informationen, Daten oder Leistungsindikatoren, die in kompakter Form auf einer einzigen Bildschirmseite präsentiert werden. Es bietet einen prägnanten und leicht verständlichen Überblick über verschiedene Aspekte eines Geschäftsprozesses, einer Website, einer Anwendung oder eines anderen Systems. Dashboards dienen oft auch als Einstiegspunkt zu den verschiedenen Bereichen einer Webanwendung.
 
-Layoutmässig nehmen Dashboards entweder ein ganzes Anwendungsfenster ein, oft aber auch nur den Hauptbereich rechts oder gar nur ein Teil des Anwendungsfensters. Da es bislang keine semantische Auszeichnung für den Dashboardbereich gibt, ist es besonders für die Screenreaderbenutzer und für die Benutzer der Vergrößerungssoftware sehr schwierig festzustellen, dass sich dabei um ein Dashboard handelt und wo sein Anfang und Ende sind.
+Layoutmässig nehmen Dashboards  Dashboards normalerweise das gesamte Anwendungsfenster ein, nutzen aber oft auch nur den Hauptbereich oder sogar nur einen Teil davon. Widgets innerhalb von Dashboards können häufig vom Benutzer gruppiert, in der Größe angepasst und neu angeordnet werden. Da es bisher keine semantische Kennzeichnung für den Dashboard-Bereich gibt, ist es besonders für Bildschirmlesegerät-Nutzer und für Benutzer von Vergrößerungssoftware sehr schwierig, ein Dashboard als solches zu identifizieren.
 
 Ausserdem handelt es sich bei Dashboards um solche Bereiche, die Matt King in seinem Vorschlag [An Accessibility Opportunity Hidden in Modeless Web Dialogs]( https://gist.github.com/mcking65/11882ebbe2889964c62ab5a16ab528c3) als 
-> similar to modeless dialogs 
+"similar to modeless dialogs" bezeichnet. 
 
-bezeichnet. 
+## Beispiele
 
-Fabasoft Cloud verwendet z. B. ein Dashboard als das Zugangsfenster zu allen Cloudinhalten - Cloud Home:
+Hier ist ein Beispiel für das HOM-Dashboard von SAP's S/4HANA:
+![Home dashboard von SAP's S/4HANA](SAP-home-dashboard.png)
+In diesem Dashboard können Kacheln vom Benutzer gruppiert, neu angeordnet und in der Größe angepasst werden.
+
+Ein weiteres Beispiel für ein Dashboard ist das Verkaufsübersichts-Dashboard von SAP's S/4HANA:
+![Verkaufsübersicht dashboard von SAP's S/4HANA](SAP-sales-overview.png)
+Hier können Kacheln frei vom Benutzer neu angeordnet und angepasst werden, aber nicht gruppiert werden.
+
+Ein letztes Beispiel für ein Dashboard ist das Homde Dashboard der Fabasoft Cloud:
 ![Fabasoft Cloud Home](HomeDashboard.png)
-
-oder als Zugang zu einer der Web Apps auf der Fabasoft Cloud Platform:
-![Cloud Organization Dashboard](CloudOrganizationDashboard.png)
+In diesem Dashboard können Kacheln vom Benutzer basierend auf einem Rasterlayout neu angeordnet und angepasst werden, aber nicht gruppiert.
 
 ## ARIA Semantics
 
@@ -25,10 +31,10 @@ oder als Zugang zu einer der Web Apps auf der Fabasoft Cloud Platform:
 - Abgeleitet von der Rolle `dialog`
 - `aria-modal=false` (default)
 - `aria-orientation=both` (default)
-- Allowed Accessibility Children: 
-  - `heading` 
-  - `tile`
-
+- Allowed Accessibility Child Roles:
+   - `group`
+   - `heading`
+   - `tile`
 # Rolle ` | Kachel`
 
 ## Beschreibung
@@ -36,8 +42,11 @@ oder als Zugang zu einer der Web Apps auf der Fabasoft Cloud Platform:
 Die Rolle `tile` ist das Accessibility Child der `dashboard`-Rolle. Die Elemente mit dieser Rolle sind ähnlich den Elementen mit der Rolle `cell`, indem sie tabellenzellenartige, sowohl horizontal als auch vertikal nebeneinander positioniert werden. Wie Tabellenzellen können Sie aber von unterschiedlicher Größe sein. Die `tile`-Rolle verhält sich somit wie ein `TD`-Element, das unterschiedliche Werte der `colspan` und/oder `rowspan` Attribute hat. Dieser Vergleich soll nur zum besseren Verständnis des Konzepts behilflich sein und bedeutet keineswegs, dass die Kacheln im Markup dem Tabellenparadigma immer folgen müssen.
 
 ## ARIA-Semantik
-- Ähnlicher Konzept: Tabellenzelle (`cell`-Element)
-- Accessibility Parent: `dashboard`
+- Role name: `tile` or `card`
+- Similar concept: table cell (`cell` element)
+- Required Accessibility Parent Roles: 
+   - `dashboard`
+   - `group`
 
 # Tastaturbedienung
 
