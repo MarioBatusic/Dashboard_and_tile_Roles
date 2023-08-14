@@ -51,7 +51,7 @@ The `tile` role is the accessibility child of the `dashboard` role. Elements wit
 
 This digression belongs more to the ARIA Authoring Practices Guide, but it is useful to think about keyboard shortcuts concerning a new role right away.
 
-Some of the dashboards available on the eeb allow navigation between the tiles using the arrow keys or the tab key. Very few allow resizing and repositioning using the keyboard. However, most dashboards do not provide for their own keyboard navigation between the tiles.
+Some of the dashboards available on the web support navigation between the tiles using the arrow keys or the tab key. Very few allow resizing and repositioning using the keyboard. However, most dashboards do not provide support for keyboard interaction and navigation between the tiles.
 
 All functionalities that are possible with the mouse must also be available with the keyboard:
 
@@ -69,7 +69,7 @@ Here are some suggested keyboard shortcuts:
 | Ctrl+Left Arrow | Go to the previous tile in the complete tile order |
 | Tab and Shift+Tab | Go to next/previous widget (through all tiles) |
 
-All functionalities of an individual  tile that are possible with the mouse must also be made available via keyboard. To adjust the size and/or the position of a tile in the dashboard using the keyboard, there are two alternative possibilities:
+All functionalities of an individual tile that are possible with the mouse must also be made available via keyboard. To adjust the size and/or the position of a tile in the dashboard using the keyboard, there are two alternative possibilities:
 
 1. A menu button in the tile opens a menu with corresponding options, or
 2. Shift+F10 / context menu key opens a context menu with appropriate options when the focus is on a widget in a tile.
