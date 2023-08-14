@@ -4,19 +4,24 @@
 
 The dashboard is a container that is being used more and more.
 
-A dashboard is a graphical representation of information, data, or performance indicators presented in a compact form on a single screen. It provides a concise and easy-to-understand overview of various aspects of a business process, website, application or other system. Dashbboards also often serve as an entry-point to the individual areas of a web application.
+A dashboard is a graphical representation of information, data, or performance indicators presented in a compact form on a single screen. It provides a concise and easy-to-understand overview of various aspects of a business process, website, application or other system. Dashbboards also often serve as an entry-point to the different areas of a web application.
 
-In terms of layout, dashboards either take up an entire application window, or only the main area on the right side or even just part of the application window. Since there is no semantic markup for the dashboard area up to now, it is very difficult, especially for the screen reader users and for the users of the magnifier software, to determine that some part of the page contents is is a dashboard and where are its beginning and its end.
+In terms of layout, dashboards usually take up the entire application window, but often also only use the main area or even just part of it. Widgets within dashboards can often be grouped, adjusted in size and rearanged by the user. Since there is no semantic markup for the dashboard area up to now, it is very difficult, especially for the screen reader users and for the users of magnifier software, to identify a dashboard as such. 
 
-In addition, dashboards are areas that Matt King describes in his proposal [An Accessibility Opportunity Hidden in Modeless Web Dialogs](https://gist.github.com/mcking65/11882ebbe2889964c62ab5a16ab528c3) as
+In addition, dashboards are areas that Matt King describes in his proposal [An Accessibility Opportunity Hidden in Modeless Web Dialogs](https://gist.github.com/mcking65/11882ebbe2889964c62ab5a16ab528c3) as "similar to modeless dialogs".
 
-> similar to modeless dialogs.
+## Examples
+Here is an example of the home dashboard SAP's S/4HANA:
+![Home dashboard of SAP's S/4HANA](SAP-home-dashboard.png)
+In this dashboard tiles can be grouped, rearanged and adjusted in size by the user.
 
-Fabasoft Cloud uses e.g. a dashboard as its Home:
+Another example of a dashboard is SAP's sales overview dashboard:
+![Sales dashboard of SAP's S/4HANA](SAP-sales-overview.png)
+Here tiles can be freely rearanged and ajdusted by the user, but not grouped.
+
+A final example for a dashboard is Fabasofts cloud home dashboard:
 ![Fabasoft Cloud Home](HomeDashboard.png)
-
-or as the access point to a web app on the Fabasoft Cloud Platform:
-![Cloud Organization Dashboard](CloudOrganizationDashboard.png)
+In this dashboard tiles can be rearanged and ajdusted by the user based on a grid layout, but not grouped.
 
 ## ARIA Semantics
 
@@ -24,7 +29,8 @@ or as the access point to a web app on the Fabasoft Cloud Platform:
 - Derived from the role: `dialog` 
 - `aria-modal=false` (default)
 - `aria-orientation=both` (default)
-- Allowed Accessibility Children:
+- Allowed Accessibility Child Roles:
+   - `group`
    - `heading`
    - `tile`
 
@@ -32,18 +38,20 @@ or as the access point to a web app on the Fabasoft Cloud Platform:
 
 ## Description
 
-The `tile` role is the accessibility child of the `dashboard` role. The elements with this role are similar to the elements with the `cell` role in that they are placed next to each other in a table cell-like manner, both horizontally and vertically. Like table cells they can be of different sizes. The tiles thus behave like `td` elements that have different values for their `colspan` and/or `rowspan` attributes. This comparisson is only intended to help to better understand the concept and does not mean that the tiles in the markup always follow the table paradigm.
+The `tile` role is the accessibility child of the `dashboard` role. Elements with this role are similar to the elements with the `cell` role in that they are placed next to each other in a table cell-like manner, both horizontally and vertically. Like table cells they can be of different sizes. Tiles thus behave like `td` elements that have different values for their `colspan` and/or `rowspan` attributes. This comparisson is only intended to help to better understand the concept and does not mean that the tiles in the markup always follow the table paradigm.
 
 ## ARIA Semantics
 - Role name: `tile` or `card`
 - Similar concept: table cell (`cell` element)
-- Accessibility Parent: `dashboard`
+- Required Accessibility Parent Roles: 
+   - `dashboard`
+   - `group`
 
 # Keyboard Shortcuts
 
 This digression belongs more to the ARIA Authoring Practices Guide, but it is useful to think about keyboard shortcuts concerning a new role right away.
 
-Some of the dashboards available on the Web allow navigation between the tiles using the arrow keys or the tab key. Very few allow resizing and repositioning using the keyboard. However, most dashboards do not provide for their own keyboard navigation between the tiles.
+Some of the dashboards available on the eeb allow navigation between the tiles using the arrow keys or the tab key. Very few allow resizing and repositioning using the keyboard. However, most dashboards do not provide for their own keyboard navigation between the tiles.
 
 All functionalities that are possible with the mouse must also be available with the keyboard:
 
