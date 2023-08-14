@@ -1,15 +1,12 @@
-# Dashboard_and_tile_Roles
-Description and definition of the roles "dashboard" and "tile".
-
 # Issue for W3C/ARIA Repository
 
-## Issue Name:
+## Issue Title:
 
-Proposal for `dashboard` and `tile` Roles
+Proposal for `dashboard` and `tile` roles
 
 ## Contents
 
-More and more Web Applications use Dashboards as their main access-point to its data and processes. 
+More and more web applications use dashboards as their main access-point to its data and processes. 
 
 I propose a role `dashboard` and its sub-role `tile` or `card` as required semantics and as the startpoint on the way to future HTML elements for these already used constructs.
 
